@@ -68,7 +68,7 @@ class UI {
             .then(datos => {
                 // Obtener datos
                 const resultados = datos.respuesta.results;
-                
+
                 // Enviar json y la busqueda para el filtrado
                 this.filtrarSugerencias(resultado, busqueda);
             })
@@ -76,10 +76,10 @@ class UI {
     // Filtra las sugerencias en base al input
     filtrarSugerencias(resultado, busqueda) {
         // filtrar
-        const filtro = resultado.filter(filtro => filtro.calle.indexOf() !== -1);
 
-        
+
+
         // Mostrar los pines
-        
+
     }
 }
