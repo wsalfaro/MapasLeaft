@@ -67,7 +67,7 @@ class UI {
         this.api.obtenerDatos()
             .then(datos => {
                 // Obtener datos
-                const resultados = datos.respuesta.results;
+                const resultado = datos.respuesta.results;
 
                 // Enviar json y la busqueda para el filtrado
                 this.filtrarSugerencias(resultado, busqueda);
@@ -75,9 +75,9 @@ class UI {
     }
     // Filtra las sugerencias en base al input
     filtrarSugerencias(resultado, busqueda) {
-        // filtrar
+        const filtro = resultado.filter(filtro => filtro.calle.indexOf(busqueda) !== -1);
 
-
+        this.mostrarPines(filtro);
 
         // Mostrar los pines
 
